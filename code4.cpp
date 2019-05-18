@@ -229,7 +229,7 @@ void initParticles(int i)
     par_sys[i].fade = float(rand()%100)/1000.0f+0.003f;
 
     par_sys[i].xpos = (float)( (rand() % 350) - 150)/10;
-    par_sys[i].ypos = (float)( (rand() % 201) - 100)/100;    
+    par_sys[i].ypos = (float)( (rand() % 201) - 80)/100;    
     par_sys[i].zpos = (float) ((rand() % 201) - 5)/10;
 
     par_sys[i].red = 0.5;
