@@ -357,13 +357,9 @@ void drawSnow()
 
 void scene2(bool snowmanflag,float Rtree,float Gtree, float Btree, float Rland, float Gland, float Bland)
 {
-
-
-
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glClearColor(0.00, 0.8, 0.816, 0.0);
-    land(Rland, Gland,Bland); //
-    
+    land(Rland, Gland,Bland);     
     
     if(!snowmanflag)
     {
@@ -442,26 +438,20 @@ void scene2(bool snowmanflag,float Rtree,float Gtree, float Btree, float Rland, 
     if(rain)
     {
        	for (loop = 0; loop < MAX_PARTICLES; loop++)
-       	 {
-       	 
-        	initParticles(loop);
-   		 }
-       	drawRain();
-       	
+       	 {       	 
+          initParticles(loop);
+   	 }
+       	drawRain();       	
     } 
     if(snow)
     {
        	for (loop = 0; loop < MAX_PARTICLES; loop++)
-       	 {
-       	 
-        	initParticles(loop);
-   		 }
-       	drawSnow();
-       	
-    }      
-    
-    
-	glFlush();
+       	 {       	 
+         initParticles(loop);
+   	 }
+       	drawSnow();       	
+    }        
+    glFlush();
     glutSwapBuffers();
     
 }
