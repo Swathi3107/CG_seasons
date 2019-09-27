@@ -22,7 +22,7 @@ goDown = false, moon = true, snowmanMovement = true, sLeft = true,
 sRight = false;
 
 
-//method to make ground have snow
+//method to make ground have snow and snowman
 void snow(void){
     //need to disable lighting and depth test
     //so creation is not affected
