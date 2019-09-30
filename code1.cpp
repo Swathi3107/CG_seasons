@@ -80,7 +80,7 @@ void house(void){
     glutSolidCube(.23);
 }
 
-//method to create a tree
+//method to create tree
 void tree(void){
     //trunk
     glPushMatrix();
@@ -100,7 +100,7 @@ void tree(void){
     glutSolidCone(.2, .3, 40, 40);
 }
 
-//method to create moon/ sun
+//method to create moon or sun
 //the moon/sun is the light source
 void moonOrSun(void){
     glTranslated(.05, 0, 0);
@@ -113,7 +113,7 @@ void moonOrSun(void){
     glEnable(GL_LIGHT0);
 }
 
-//method that will create an entire snowman
+//method that will create an entire snowman along with hands legs, etc
 void snowman(void){
     //hat
     glTranslated(-.05, 0, 0);
@@ -129,7 +129,7 @@ void snowman(void){
     glTranslated(0, 0, -.015);
     glutSolidTorus(.05, .07, 10, 10);
     glPopMatrix();
-    //body
+    //body of snowman
     glPushMatrix();
     glColor3f(1, 1,  1);
     glTranslated(0, .2, 0);
@@ -139,7 +139,7 @@ void snowman(void){
     glTranslated(0.0, -.6, 0);
     glutSolidSphere(.4, 40, 40);
     glPopMatrix();
-    //eyes
+    //eyes of snowman
     glPushMatrix(); //feature
     glPushMatrix(); //face
     glTranslated(-.07, .3, .15);
@@ -164,7 +164,7 @@ void snowman(void){
     glTranslated(.03, .015, 0);
     glutSolidSphere(.014, 40, 40);
     glPopMatrix(); //pop face objects
-    //body buttons
+    //body buttons of snowman
     glColor3f(0, 0, 0);
     glTranslated(.03, -.09, .26);
     glutSolidSphere(.02, 40, 40);
@@ -190,7 +190,7 @@ void snowman(void){
 void snoww()
 {
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    snow(); //snow on the ground
+    snow(); //snow on the ground in winter
     
     //big snow man creation
     glPushMatrix();
