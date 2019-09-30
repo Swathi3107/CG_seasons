@@ -9,12 +9,12 @@ static int value=0;
 static int menuid;
 int loop;
 
-#define MAX_PARTICLES 1000
+#define MAX_PARTICLES 5000
 float slowdown = 2.0;
 float velocity = 0.0;
 float zoom = -40.0;
 
-bool snow=false, rain=false;
+bool snow=false, rain=true;
 typedef struct {
   // Life
   bool alive;	// is the particle alive?
@@ -35,7 +35,7 @@ typedef struct {
 }particles;
 
 // Paticle System
-particles par_sys[MAX_PARTICLES];
+particles par_sys[MAX_PARTICLES-1];
 
 GLfloat pos[] = {0, 0, 0, 1}, //light position
 emission[] = {0, 0, 0, 1},
@@ -77,7 +77,7 @@ void land(float Rland, float Gland, float Bland)
     glBegin(GL_QUADS);
        glColor3f(Rland, Gland, Bland);
         glVertex2f(-2.3, -.88);
-        glVertex2f(2.3, -.88);
+        glVertex2f(2.3, -.89);
         glVertex2f(2.3, -2.3);
         glVertex2f(-2.3, -2.3);
     glEnd();
