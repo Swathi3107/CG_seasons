@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
+#include<stdio.h>
 #include<stdbool.h>
 #include <GL/glut.h>
 using namespace std;
@@ -12,7 +13,7 @@ int loop;
 #define MAX_PARTICLES 1000
 float slowdown = 2.0;
 float velocity = 0.0;
-float zoom = -40.0;
+float zoom = -39.0;
 
 bool snow=false, rain=false;
 typedef struct {
@@ -77,8 +78,8 @@ void land(float Rland, float Gland, float Bland)
     glBegin(GL_QUADS);
        glColor3f(Rland, Gland, Bland);
         glVertex2f(-2.3, -.88);
-        glVertex2f(2.3, -.88);
-        glVertex2f(2.3, -2.3);
+        glVertex2f(2.3, -.881);
+        glVertex2f(2.3, -2.33);
         glVertex2f(-2.3, -2.3);
     glEnd();
     glEnable(GL_LIGHTING);
