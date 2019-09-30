@@ -61,9 +61,9 @@ void snowland(void){
     glDisable(GL_DEPTH_TEST);
     glBegin(GL_QUADS);
        glColor3f(.9, .9, .9);
-        glVertex2f(-2.3, -.88);
+        glVertex2f(-2.3, -.89);
         glVertex2f(2.3, -.88);
-        glVertex2f(2.3, -2.3);
+        glVertex2f(2.3, -2.33);
         glVertex2f(-2.3, -2.3);
     glEnd();
     glEnable(GL_LIGHTING);
@@ -93,7 +93,7 @@ void house(void){
     glPushMatrix();
     glColor3f(.388, .2, .0039);
     glScaled(.5, .5, .5);
-    glRotated(45, 0, 1, 0);
+    glRotated(45, 0, 1, 0.5);
     glutSolidOctahedron();
     glPopMatrix();
     //house
@@ -116,7 +116,7 @@ void house(void){
 void tree(float Rtree, float Gtree, float Btree ){
     //trunk
     glPushMatrix();
-    glColor3f(.388, .2, .0039);
+    glColor3f(.388, 0.2, .0039);
     
     GLUquadric* qobj = gluNewQuadric(); //cylinder trunk
     glRotated(90, 1, 0, 0);
@@ -165,7 +165,7 @@ void snowman(void){
     glPopMatrix();
     //body
     glPushMatrix();
-    glColor3f(1, 1,  1);
+    glColor3f(1, 1,  0.9);
     glTranslated(0, .2, 0);
     glutSolidSphere(.19, 40, 40);
     glTranslated(0.0, -.45, 0);
@@ -198,7 +198,7 @@ void snowman(void){
     glTranslated(.03, .015, 0);
     glutSolidSphere(.014, 40, 40);
     glPopMatrix(); //pop face objects
-    //body buttons
+    //body_buttons
     glColor3f(0, 0, 0);
     glTranslated(.03, -.09, .26);
     glutSolidSphere(.02, 40, 40);
@@ -207,7 +207,7 @@ void snowman(void){
     glTranslated(0, -.09, .01);
     glutSolidSphere(.02, 40, 40);
     glPopMatrix(); //pop features objects
-    //arms
+    //arms_snowman
     glPushMatrix();
     glColor3f(.388, .2, .0039);
     GLUquadric* qobj = gluNewQuadric(); //create cylinder object
